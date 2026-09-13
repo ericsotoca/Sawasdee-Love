@@ -178,7 +178,7 @@ export const StripeCheckoutModal: React.FC<StripeCheckoutModalProps> = ({
                 </label>
                 <input
                   type="text"
-                  placeholder="e.g. SAWASDEE-P1"
+                  placeholder="SAWASDEE-XXXX"
                   value={inputCode}
                   onChange={(e) => {
                     setInputCode(e.target.value);

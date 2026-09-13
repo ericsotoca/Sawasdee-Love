@@ -115,7 +115,7 @@ export const AccessCodeModal: React.FC<AccessCodeModalProps> = ({
               type="text"
               value={inputCode}
               onChange={(e) => setInputCode(e.target.value)}
-              placeholder="e.g. SAWASDEE-VIP3"
+              placeholder="SAWASDEE-XXXX"
               className="w-full uppercase font-mono tracking-wider text-center text-base font-bold bg-stone-50 border border-stone-300 rounded-xl px-4 py-3 text-stone-900 focus:bg-white focus:outline-rose-500 focus:border-rose-500 transition-colors"
               autoFocus
             />
