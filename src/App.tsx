@@ -126,8 +126,8 @@ export default function App() {
         currentTier={accessState.currentTier}
         onToggleLanguage={handleToggleLanguage}
         onOpenAccessModal={() => setIsAccessModalOpen(true)}
-        onOpenCreatorModal={() => setIsCreatorModalOpen(true)}
-        onHomeClick={() => {
+        onOpenSettingsModal={() => setIsCreatorModalOpen(true)}
+        onNavigateHome={() => {
           setCurrentView('home');
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }}

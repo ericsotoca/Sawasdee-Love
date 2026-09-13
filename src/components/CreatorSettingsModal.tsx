@@ -10,7 +10,9 @@ import {
   Save,
   HelpCircle,
   Sparkles,
-  Github
+  Github,
+  Lock,
+  AlertCircle
 } from 'lucide-react';
 import { Language, TierLevel } from '../types';
 import {
@@ -37,12 +39,30 @@ export const CreatorSettingsModal: React.FC<CreatorSettingsModalProps> = ({
   currentTier,
   onQuickSetTier,
 }) => {
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(() => {
+    return sessionStorage.getItem('creator_authenticated') === 'true';
+  });
+  const [inputCode, setInputCode] = useState('');
+  const [authError, setAuthError] = useState(false);
+
   const [activeTab, setActiveTab] = useState<'stripe' | 'codes' | 'github'>('stripe');
   const [stripeLinks, setStripeLinks] = useState(getStripePaymentLinks());
   const [customCodes, setCustomCodesState] = useState(getCustomCodes());
   const [savedSuccess, setSavedSuccess] = useState(false);
 
   if (!isOpen) return null;
+
+  const handleAuthenticate = (e: React.FormEvent) => {
+    e.preventDefault();
+    const cleanCode = inputCode.trim();
+    if (cleanCode.toLowerCase() === 'sotoca') {
+      setIsAuthenticated(true);
+      sessionStorage.setItem('creator_authenticated', 'true');
+      setAuthError(false);
+    } else {
+      setAuthError(true);
+    }
+  };
 
   const handleSaveStripe = (e: React.FormEvent) => {
     e.preventDefault();
@@ -57,6 +77,66 @@ export const CreatorSettingsModal: React.FC<CreatorSettingsModalProps> = ({
     setSavedSuccess(true);
     setTimeout(() => setSavedSuccess(false), 2000);
   };
+
+  if (!isAuthenticated) {
+    return (
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-stone-900/60 backdrop-blur-xs">
+        <div className="bg-white rounded-3xl max-w-sm w-full p-6 shadow-2xl border border-stone-200 space-y-4 animate-in fade-in zoom-in duration-200">
+          <div className="flex justify-between items-start">
+            <div className="p-2.5 rounded-2xl bg-amber-50 text-amber-600">
+              <Lock className="w-6 h-6" />
+            </div>
+            <button
+              onClick={onClose}
+              className="p-1.5 rounded-lg text-stone-400 hover:text-stone-600 hover:bg-stone-100 transition-colors"
+            >
+              <X className="w-5 h-5" />
+            </button>
+          </div>
+
+          <div className="space-y-1">
+            <h3 className="font-bold text-stone-900 text-lg">
+              Accès réservé au créateur
+            </h3>
+            <p className="text-xs text-stone-500 leading-relaxed">
+              Veuillez saisir votre code d'accès administrateur pour modifier les liens Stripe et les codes d'accès.
+            </p>
+          </div>
+
+          <form onSubmit={handleAuthenticate} className="space-y-3">
+            <div>
+              <input
+                type="password"
+                placeholder="Code d'accès"
+                value={inputCode}
+                onChange={(e) => {
+                  setInputCode(e.target.value);
+                  if (authError) setAuthError(false);
+                }}
+                className={`w-full text-sm bg-stone-50 border rounded-xl p-3 text-stone-800 focus:outline-hidden focus:ring-2 focus:ring-blue-500/20 transition-all ${
+                  authError ? 'border-red-300 bg-red-50/30 focus:border-red-500' : 'border-stone-200 focus:border-blue-500'
+                }`}
+                autoFocus
+              />
+              {authError && (
+                <p className="text-[11px] text-red-600 font-medium mt-1.5 flex items-center gap-1">
+                  <AlertCircle className="w-3 h-3" />
+                  <span>Code incorrect. Veuillez réessayer.</span>
+                </p>
+              )}
+            </div>
+
+            <button
+              type="submit"
+              className="w-full py-3 rounded-xl bg-stone-900 hover:bg-stone-800 text-white font-bold text-xs transition-colors shadow-sm cursor-pointer"
+            >
+              Déverrouiller l'accès
+            </button>
+          </form>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-stone-900/60 backdrop-blur-xs">

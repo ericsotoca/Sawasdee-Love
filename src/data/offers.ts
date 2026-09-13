@@ -4,8 +4,8 @@ export const offerPlans: OfferPlan[] = [
   {
     id: 'offer-1',
     tier: 1,
-    priceThb: 490,
-    priceEur: 14,
+    priceThb: 149,
+    priceEur: 4,
     stripePaymentLinkDefault: 'https://buy.stripe.com/4gMeVd8eXbTReGE6Sq1B600',
     th: {
       name: 'แพ็กเกจที่ 1: ปรับแต่งโปรไฟล์',
@@ -19,7 +19,7 @@ export const offerPlans: OfferPlan[] = [
         'เช็กลิสต์ตรวจความพร้อมก่อนเผยแพร่โปรไฟล์',
         'เข้าใช้งานได้ตลอดชีพ ไม่มีวันหมดอายุ'
       ],
-      ctaText: 'สมัครเรียนแพ็กเกจโปรไฟล์ (490 บาท)',
+      ctaText: 'สมัครเรียนแพ็กเกจโปรไฟล์ (149 บาท)',
       badge: 'เริ่มต้นทันที'
     },
     fr: {
@@ -34,15 +34,15 @@ export const offerPlans: OfferPlan[] = [
         'Checklist finale de validation du profil',
         'Accès illimité sans abonnement récurrent'
       ],
-      ctaText: 'Choisir cette offre (14 € / 490 THB)',
+      ctaText: 'Choisir cette offre (4 € / 149 THB)',
       badge: 'Indispensable'
     }
   },
   {
     id: 'offer-2',
     tier: 2,
-    priceThb: 890,
-    priceEur: 24,
+    priceThb: 329,
+    priceEur: 9,
     stripePaymentLinkDefault: 'https://buy.stripe.com/test_offer2_video',
     th: {
       name: 'แพ็กเกจที่ 2: โปรไฟล์ + วิดีโอแนะนำตัว',
@@ -56,7 +56,7 @@ export const offerPlans: OfferPlan[] = [
         'แบบฝึกหัดสร้างสคริปต์ + จับเวลาซ้อมพูดหน้ากล้อง',
         'เช็กลิสต์ความพร้อมก่อนโพสต์วิดีโอ'
       ],
-      ctaText: 'สมัครเรียนแพ็กเกจโปรไฟล์ + วิดีโอ (890 บาท)',
+      ctaText: 'สมัครเรียนแพ็กเกจโปรไฟล์ + วิดีโอ (329 บาท)',
       badge: 'ยอดนิยมสูงสุด'
     },
     fr: {
@@ -71,15 +71,15 @@ export const offerPlans: OfferPlan[] = [
         'Générateur de script interactif + chronomètre d\'entraînement',
         'Checklist complète de contrôle vidéo avant publication'
       ],
-      ctaText: 'Choisir cette offre (24 € / 890 THB)',
+      ctaText: 'Choisir cette offre (9 € / 329 THB)',
       badge: 'Le plus populaire'
     }
   },
   {
     id: 'offer-3',
     tier: 3,
-    priceThb: 1490,
-    priceEur: 39,
+    priceThb: 490,
+    priceEur: 14,
     stripePaymentLinkDefault: 'https://buy.stripe.com/test_offer3_vip',
     th: {
       name: 'แพ็กเกจที่ 3: คอมพลีทโปรไฟล์ + วิดีโอ + เข้าใจหนุ่มฝรั่งเศส',
@@ -94,7 +94,7 @@ export const offerPlans: OfferPlan[] = [
         'เทคนิคการนัดเดทจริงในที่สาธารณะอย่างมั่นใจ',
         'แบบประเมินความเข้ากันได้ และเช็กลิสต์ความพร้อมเริ่มต้นความรัก'
       ],
-      ctaText: 'สมัครแพ็กเกจสมบูรณ์ครบ 3 โมดูล (1,490 บาท)',
+      ctaText: 'สมัครแพ็กเกจสมบูรณ์ครบ 3 โมดูล (490 บาท)',
       badge: 'คุ้มค่าและสมบูรณ์ที่สุด'
     },
     fr: {
@@ -103,14 +103,14 @@ export const offerPlans: OfferPlan[] = [
       targetAudience: 'Pour celles qui recherchent une relation sincère, sereine et sans pièges culturels.',
       features: [
         'Accès intégral aux Modules 1, 2 et 3',
-        'Décryptage des codes culturels, de l\'humour et de la communication française',
+        'Décryptage des codes culturels, de l\'humour et de l\'expression française',
         'Comment initier la conversation et répondre avec charme et esprit',
         'Indicateurs d\'un homme sérieux vs Red flags d\'alerte immédiats',
         'Sécurité absolue : protection des données et anti-arnaques',
         'Organiser un appel vidéo et une première rencontre en toute sécurité',
         'Atelier de compatibilité personnelle et checklist relationnelle'
       ],
-      ctaText: 'Choisir l\'offre intégrale (39 € / 1 490 THB)',
+      ctaText: 'Choisir l\'offre intégrale (14 € / 490 THB)',
       badge: 'Valeur maximale'
     }
   }
