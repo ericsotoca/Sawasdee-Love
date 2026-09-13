@@ -1,0 +1,7 @@
+{
+  "name": "Sawasdee Love - แพลตฟอร์มการเรียนรู้สำหรับหญิงไทย (Guide Rencontre France-Thaïlande)",
+  "description": "แพลตฟอร์มการเรียนรู้บนมือถือสำหรับหญิงไทย: เทคนิคการเขียนโปรไฟล์ การถ่ายวิดีโอแนะนำตัว และการทำความเข้าใจหนุ่มฝรั่งเศสอย่างจริงใจและปลอดภัย พร้อมโหมดภาษาฝรั่งเศสสำหรับผู้ดูแล",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
