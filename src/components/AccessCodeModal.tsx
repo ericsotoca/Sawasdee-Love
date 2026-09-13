@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { X, KeyRound, CheckCircle2, AlertCircle, Sparkles, LogOut, ArrowRight } from 'lucide-react';
+import { X, KeyRound, CheckCircle2, AlertCircle, LogOut, ArrowRight } from 'lucide-react';
 import { Language, TierLevel } from '../types';
-import { verifyAccessCode, DEFAULT_ACCESS_CODES } from '../data/accessCodes';
+import { verifyAccessCode } from '../data/accessCodes';
 
 interface AccessCodeModalProps {
   isOpen: boolean;
@@ -143,37 +143,6 @@ export const AccessCodeModal: React.FC<AccessCodeModalProps> = ({
             <ArrowRight className="w-4 h-4" />
           </button>
         </form>
-
-        {/* Demo / Quick Test Shortcuts for Evaluators & Creator */}
-        <div className="pt-3 border-t border-stone-100 space-y-2">
-          <div className="flex items-center space-x-1.5 text-[11px] text-stone-500 font-semibold uppercase tracking-wider">
-            <Sparkles className="w-3.5 h-3.5 text-amber-500" />
-            <span>{language === 'th' ? 'รหัสทดสอบด่วน (Codes de démonstration):' : 'Codes d\'accès démo :'}</span>
-          </div>
-          <div className="grid grid-cols-3 gap-2">
-            <button
-              onClick={() => handleApplyPreset(DEFAULT_ACCESS_CODES[1][0])}
-              className="px-2 py-1.5 rounded-lg border border-stone-200 bg-stone-50 hover:bg-stone-100 text-[11px] font-mono text-stone-700 text-center font-medium"
-            >
-              Pack 1
-              <span className="block text-[9px] text-stone-500">{DEFAULT_ACCESS_CODES[1][0]}</span>
-            </button>
-            <button
-              onClick={() => handleApplyPreset(DEFAULT_ACCESS_CODES[2][0])}
-              className="px-2 py-1.5 rounded-lg border border-stone-200 bg-stone-50 hover:bg-stone-100 text-[11px] font-mono text-stone-700 text-center font-medium"
-            >
-              Pack 2
-              <span className="block text-[9px] text-stone-500">{DEFAULT_ACCESS_CODES[2][0]}</span>
-            </button>
-            <button
-              onClick={() => handleApplyPreset(DEFAULT_ACCESS_CODES[3][0])}
-              className="px-2 py-1.5 rounded-lg border border-stone-200 bg-stone-50 hover:bg-stone-100 text-[11px] font-mono text-stone-700 text-center font-medium"
-            >
-              Pack 3 (VIP)
-              <span className="block text-[9px] text-stone-500">{DEFAULT_ACCESS_CODES[3][0]}</span>
-            </button>
-          </div>
-        </div>
       </div>
     </div>
   );
