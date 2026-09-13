@@ -6,7 +6,7 @@ export const offerPlans: OfferPlan[] = [
     tier: 1,
     priceThb: 490,
     priceEur: 14,
-    stripePaymentLinkDefault: 'https://buy.stripe.com/test_offer1_profil',
+    stripePaymentLinkDefault: 'https://buy.stripe.com/4gMeVd8eXbTReGE6Sq1B600',
     th: {
       name: 'แพ็กเกจที่ 1: ปรับแต่งโปรไฟล์',
       shortDescription: 'เข้าถึงโมดูลที่ 1 ทั้งหมด เพื่อสร้างโปรไฟล์ที่ดึงดูดและปลอดภัย',

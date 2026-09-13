@@ -164,7 +164,7 @@ export function getStripePaymentLinks(): Record<TierLevel, string> {
     console.error('Failed to load Stripe links', e);
   }
   return {
-    1: 'https://buy.stripe.com/test_offer1_profil',
+    1: 'https://buy.stripe.com/4gMeVd8eXbTReGE6Sq1B600',
     2: 'https://buy.stripe.com/test_offer2_video',
     3: 'https://buy.stripe.com/test_offer3_vip'
   };
