@@ -139,9 +139,12 @@ export const StripeCheckoutModal: React.FC<StripeCheckoutModalProps> = ({
 
             {/* Action buttons */}
             <div className="pt-2">
-              <button
-                onClick={handleRedirectToStripe}
-                className="w-full py-3.5 rounded-xl bg-gradient-to-r from-rose-600 to-amber-600 text-white font-bold text-sm shadow-md hover:from-rose-700 hover:to-amber-700 transition-all flex items-center justify-center space-x-2 active:scale-98 cursor-pointer"
+              <a
+                href={stripeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setHasRedirected(true)}
+                className="w-full py-3.5 rounded-xl bg-gradient-to-r from-rose-600 to-amber-600 text-white font-bold text-sm shadow-md hover:from-rose-700 hover:to-amber-700 transition-all flex items-center justify-center space-x-2 active:scale-98 cursor-pointer no-underline"
               >
                 <span>
                   {language === 'th'
@@ -149,7 +152,7 @@ export const StripeCheckoutModal: React.FC<StripeCheckoutModalProps> = ({
                     : `S'inscrire et régler sur Stripe (${offer.priceEur} €)`}
                 </span>
                 <ArrowRight className="w-4 h-4" />
-              </button>
+              </a>
             </div>
           </>
         ) : (
