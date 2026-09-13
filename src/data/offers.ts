@@ -6,7 +6,7 @@ export const offerPlans: OfferPlan[] = [
     tier: 1,
     priceThb: 149,
     priceEur: 4,
-    stripePaymentLinkDefault: 'https://buy.stripe.com/4gMeVd8eXbTReGE6Sq1B600',
+    stripePaymentLinkDefault: 'https://buy.stripe.com/7sY00j3YH1fdfKIb8G1B601',
     th: {
       name: 'แพ็กเกจที่ 1: ปรับแต่งโปรไฟล์',
       shortDescription: 'เข้าถึงโมดูลที่ 1 ทั้งหมด เพื่อสร้างโปรไฟล์ที่ดึงดูดและปลอดภัย',
@@ -43,7 +43,7 @@ export const offerPlans: OfferPlan[] = [
     tier: 2,
     priceThb: 329,
     priceEur: 9,
-    stripePaymentLinkDefault: 'https://buy.stripe.com/test_offer2_video',
+    stripePaymentLinkDefault: 'https://buy.stripe.com/cNi8wPdzhga78ig90y1B602',
     th: {
       name: 'แพ็กเกจที่ 2: โปรไฟล์ + วิดีโอแนะนำตัว',
       shortDescription: 'เข้าถึงโมดูลที่ 1 + โมดูลที่ 2 เทคนิคถ่ายวิดีโอด้วยมือถือให้ทรงพลัง',
@@ -80,7 +80,7 @@ export const offerPlans: OfferPlan[] = [
     tier: 3,
     priceThb: 490,
     priceEur: 14,
-    stripePaymentLinkDefault: 'https://buy.stripe.com/test_offer3_vip',
+    stripePaymentLinkDefault: 'https://buy.stripe.com/bJebJ13YH5vt9mk4Ki1B603',
     th: {
       name: 'แพ็กเกจที่ 3: คอมพลีทโปรไฟล์ + วิดีโอ + เข้าใจหนุ่มฝรั่งเศส',
       shortDescription: 'เข้าถึงครบทั้ง 3 โมดูล เพื่อสร้างความสัมพันธ์ที่มีคุณภาพ ยั่งยืน และปลอดภัย',
